@@ -1,0 +1,38 @@
+{
+  "mailgun_failed_load_api_key": "Fallo al cargar el API KEY de Mailgun",
+  "mailgun_failed_load_domain": "Fallo al cargar el dominio de Mailgun",
+  "mailgun_error_sending_email": "Error enviando el correo de confirmacion. Fallo el registro de usuario.",
+
+  "confirmation_not_found": "La referencia de la confirmacion no fue encontrada.",
+  "confirmation_expired": "El link ya ha expirado.",
+  "confirmation_already_confirmed": "El registro ya ha sido confirmado.",
+  "confirmation_resend_fail": "Error interno del servidor. Fallo el re-envio del correo de confirmacion.",
+  "confirmation_resend_successful": "El correo de confirmacion ha sido re-enviado.",
+
+  "item_name_already_exists": "Un producto con nombre '{}' ya existe.",
+  "item_error_inserting": "Un error ocurrio mientras se insertaba el producto.",
+  "item_not_found": "Producto no encontrado.",
+  "item_deleted": "Producto eliminado.",
+
+  "store_name_already_exist": "Una tienda con el nombre '{}' ya existe.",
+  "store_error_inserting": "Un error ocurrio mientras se insertaba la tienda.",
+  "store_not_found": "Tineda no encontrada.",
+  "store_deleted": "Tienda eliminada.",
+
+  "user_username_exists": "Un usuario con ese nombre de usuario ya existe.",
+  "user_email_exists": "Un usuario con ese correo ya existe.",
+  "user_not_found": "Usuario no encontrado.",
+  "user_deleted": "Usuario eliminado.",
+  "user_invalid_credentials": "Credenciales invalidas.",
+  "user_logged_out": "Usuario '{}' ha cerrado sesion correctamente.",
+  "user_not_confirmed": "No has confirmado tu registro, por favor revisa tu correo. {}",
+  "user_confirmed": "Usuario confirmado.",
+  "user_failed_to_create": "Error interno del servidor. Fallo el registro de usuario..",
+  "user_registered": "Usuario creado con exito. Un correo de activacion ha sido enviado a tu correo electronico. Por favor revisa.",
+
+  "language_not_found": "El lenguaje seleccionado no es soportado.",
+  "language_change_success": "El lenguaje se ha cambiado exitosamente.",
+
+  "image_uploaded": "Imagen '{}' cargada.",
+  "image_illegal_extension": "Extension '{}' no esta permitida."
+}
