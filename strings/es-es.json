@@ -34,5 +34,9 @@
   "language_change_success": "El lenguaje se ha cambiado exitosamente.",
 
   "image_uploaded": "Imagen '{}' cargada.",
-  "image_illegal_extension": "Extension '{}' no esta permitida."
+  "image_illegal_extension": "Extension '{}' no esta permitida.",
+  "image_illegal_file_name": "Nombre de archivo '{}' no permitido.",
+  "image_not_found": "Imagen '{}' no encontrada.",
+  "image_deleted": "Imagen '{}' eliminada.",
+  "image_delete_failed": "Error interno del servidor.  No se pudo eliminar la imagen."
 }
