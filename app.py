@@ -10,7 +10,7 @@ from db import db
 from libs.image_helper import IMAGE_SET
 from ma import ma
 from resources.confirmation import Confirmation, ConfirmationByUser
-from resources.image import ImageUpload
+from resources.image import ImageUpload, Image
 from resources.item import Item, ItemList
 from resources.language import Language
 from resources.store import Store, StoreList
@@ -62,6 +62,7 @@ api.add_resource(Confirmation, "/user_confirmation/<string:confirmation_id>")
 api.add_resource(ConfirmationByUser, "/confirmation/user/<int:user_id>")
 api.add_resource(Language, "/language/<string:locale>")
 api.add_resource(ImageUpload, "/upload/image")
+api.add_resource(Image, "/image/<string:filename>")
 
 
 if __name__ == "__main__":
