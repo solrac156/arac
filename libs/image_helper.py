@@ -41,7 +41,7 @@ def is_filename_safe(file: Union[str, FileStorage]) -> bool:
     """Check our regex and return whether the string matches or not."""
     filename = _retrieve_filename(file)
     allowed_format = "|".join(IMAGES)
-    regex = fr"^[a-zA-Z0-9][a-zA-Z0-9]_()-\.]*\.({allowed_format})$"
+    regex = fr"^[a-zA-Z0-9][a-zA-Z0-9_()-\.]*\.({allowed_format})$"
     return re.match(regex, filename) is not None
 
 
