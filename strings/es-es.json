@@ -38,5 +38,8 @@
   "image_illegal_file_name": "Nombre de archivo '{}' no permitido.",
   "image_not_found": "Imagen '{}' no encontrada.",
   "image_deleted": "Imagen '{}' eliminada.",
-  "image_delete_failed": "Error interno del servidor.  No se pudo eliminar la imagen."
+  "image_delete_failed": "Error interno del servidor.  No se pudo eliminar la imagen.",
+
+  "avatar_delete_failed": "Error interno del servidor.  No se pudo eliminar el avatar.",
+  "avatar_uploaded": "Avatar '{}' cargado."
 }
