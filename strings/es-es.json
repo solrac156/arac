@@ -41,5 +41,6 @@
   "image_delete_failed": "Error interno del servidor.  No se pudo eliminar la imagen.",
 
   "avatar_delete_failed": "Error interno del servidor.  No se pudo eliminar el avatar.",
-  "avatar_uploaded": "Avatar '{}' cargado."
+  "avatar_uploaded": "Avatar '{}' cargado.",
+  "avatar_not_found": "Avatar no encontrado."
 }
