@@ -16,6 +16,9 @@ marshmallow-sqlalchemy = "==0.22.0"
 flask-sqlalchemy = "==2.4.0"
 flask-uploads = "*"
 sqlalchemy = "==1.2.12"
+psycopg2-binary = "*"
+flask-migrate = "*"
+alembic = "==1.4.3"
 
 [dev-packages]
 
