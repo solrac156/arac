@@ -4,6 +4,7 @@ from flask_jwt_extended import JWTManager
 from flask_restful import Api
 from flask_uploads import patch_request_class, configure_uploads
 from marshmallow import ValidationError
+from flask_migrate import Migrate
 
 from blacklist import BLACKLIST
 from db import db
@@ -29,6 +30,10 @@ app.config.from_envvar("APPLICATION_SETTINGS")
 patch_request_class(app, 10 * 1024 * 1024)
 configure_uploads(app, IMAGE_SET)
 api = Api(app)
+jwt = JWTManager(app)
+db.init_app(app)
+ma.init_app(app)
+migrate = Migrate(app, db)
 
 
 @app.before_first_request
@@ -39,9 +44,6 @@ def create_tables():
 @app.errorhandler(ValidationError)
 def handle_marshmallow_validation(err):
     return jsonify(err.messages), 400
-
-
-jwt = JWTManager(app)
 
 
 @jwt.token_in_blacklist_loader
@@ -68,6 +70,4 @@ api.add_resource(Avatar, "/avatar/<int:user_id>")
 
 
 if __name__ == "__main__":
-    db.init_app(app)
-    ma.init_app(app)
     app.run(port=5000)
