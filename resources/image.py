@@ -81,12 +81,16 @@ class AvatarUpload(Resource):
         try:
             ext = image_helper.get_extension(data["image"].filename)
             avatar = filename + ext
-            avatar_path = image_helper.save_image(data["image"], folder=folder, name=avatar)
+            avatar_path = image_helper.save_image(
+                data["image"], folder=folder, name=avatar
+            )
             basename = image_helper.get_basename(avatar_path)
             return {"message": gettext("avatar_uploaded").format(basename)}, 200
         except UploadNotAllowed:
             extension = image_helper.get_extension(data["image"])
-            return {"message": gettext("image_illegal_extension").format(extension)}, 400
+            return {
+                "message": gettext("image_illegal_extension").format(extension)
+            }, 400
 
 
 class Avatar(Resource):
