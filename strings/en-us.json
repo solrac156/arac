@@ -29,6 +29,7 @@
   "user_confirmed": "User confirmed.",
   "user_failed_to_create": "Internal server error. Failed to create user.",
   "user_registered": "Account created successfully. An email with an activation link has been sent to your email address. Please check.",
+  "user_password_updated": "User password updated successfully.",
 
   "language_not_found": "The selected language is not supported.",
   "language_change_success": "Language changed successfully.",

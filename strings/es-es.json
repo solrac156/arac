@@ -29,6 +29,7 @@
   "user_confirmed": "Usuario confirmado.",
   "user_failed_to_create": "Error interno del servidor. Fallo el registro de usuario..",
   "user_registered": "Usuario creado con exito. Un correo de activacion ha sido enviado a tu correo electronico. Por favor revisa.",
+  "user_password_updated": "La contraseña del usuario se ha cambiado correctamente.",
 
   "language_not_found": "El lenguaje seleccionado no es soportado.",
   "language_change_success": "El lenguaje se ha cambiado exitosamente.",
