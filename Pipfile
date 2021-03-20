@@ -19,6 +19,7 @@ sqlalchemy = "==1.2.12"
 psycopg2-binary = "*"
 flask-migrate = "*"
 alembic = "==1.4.3"
+flask-oauthlib = "*"
 
 [dev-packages]
 
