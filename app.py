@@ -1,16 +1,18 @@
 from dotenv import load_dotenv
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
+from flask_migrate import Migrate
 from flask_restful import Api
 from flask_uploads import patch_request_class, configure_uploads
 from marshmallow import ValidationError
-from flask_migrate import Migrate
 
 from blacklist import BLACKLIST
 from db import db
 from libs.image_helper import IMAGE_SET
 from ma import ma
+from oa import oauth
 from resources.confirmation import Confirmation, ConfirmationByUser
+from resources.github_login import GithubLogin, GithubAuthorize
 from resources.image import ImageUpload, Image, AvatarUpload, Avatar
 from resources.item import Item, ItemList
 from resources.language import Language
@@ -21,6 +23,7 @@ from resources.user import (
     UserLogin,
     TokenRefresh,
     UserLogout,
+    SetPassword,
 )
 
 app = Flask(__name__)
@@ -33,6 +36,7 @@ api = Api(app)
 jwt = JWTManager(app)
 db.init_app(app)
 ma.init_app(app)
+oauth.init_app(app)
 migrate = Migrate(app, db)
 
 
@@ -67,6 +71,11 @@ api.add_resource(ImageUpload, "/upload/image")
 api.add_resource(Image, "/image/<string:filename>")
 api.add_resource(AvatarUpload, "/upload/avatar")
 api.add_resource(Avatar, "/avatar/<int:user_id>")
+api.add_resource(GithubLogin, "/login/github")
+api.add_resource(
+    GithubAuthorize, "/login/github/authorized", endpoint="github.authorize"
+)
+api.add_resource(SetPassword, "/user/password")
 
 
 if __name__ == "__main__":
