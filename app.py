@@ -16,6 +16,7 @@ from resources.github_login import GithubLogin, GithubAuthorize
 from resources.image import ImageUpload, Image, AvatarUpload, Avatar
 from resources.item import Item, ItemList
 from resources.language import Language
+from resources.order import Order
 from resources.store import Store, StoreList
 from resources.user import (
     UserRegister,
@@ -76,6 +77,7 @@ api.add_resource(
     GithubAuthorize, "/login/github/authorized", endpoint="github.authorize"
 )
 api.add_resource(SetPassword, "/user/password")
+api.add_resource(Order, "/order")
 
 
 if __name__ == "__main__":
